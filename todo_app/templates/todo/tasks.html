@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Tasks_List</title>
+  {%load static%}
+  <link rel="stylesheet" href="{% static 'todo/css/style.css' %}">
+</head>
+<body>
+  <h1>To-Do-List</h1>
+  <form method="post" action="{%url 'store_data'%}">
+    {%csrf_token%}
+    <label for="">Enter-Tasks :</label>
+    <input type="text" name="data" id="task-details" required>
+    <button type="submit">ADD</button>
+  </form>
+  <table border="1px">
+    <thead>
+      <th>Tasks List</th>
+    </thead>
+    <tbody>
+        {%for task in tasks%}
+          {%if task%}
+          <tr>
+            <td>
+              <form method="post" action="{%url 'completed' task.id%}">
+                {%csrf_token%}
+                {{task}}
+                <button type="submit" name="action" value="completed">&#x2705;</button>
+                <button type="submit" name="action" value="edit">&#128221;</button>
+              </form>
+            </td>
+          </tr>
+          {%endif%}
+        {%endfor%}
+    </tbody>
+  </table>
+  <table border="1px">
+    <thead>
+      <th>completed-tasks</th>
+    </thead>
+    <tbody>
+      {%for task in done_tasks%}
+          <tr >
+            <td id="completed-data">
+              <form method="post" action="{%url 'delete_task' task.id%}">
+                {%csrf_token%}
+                {{task}}
+                <button type="submit" id="trash">&#128465;</button>
+              </form>
+            </td>
+          </tr>
+      {%endfor%}
+    </tbody>
+  </table>
+</body>
+</html>

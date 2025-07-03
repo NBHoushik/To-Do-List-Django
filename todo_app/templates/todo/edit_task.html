@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Edit-Task</title>
+  {%load static%}
+  <link rel="stylesheet" href="{% static 'todo/css/edit.css' %}">
+</head>
+<body>
+  <div>
+    <form method="post" action="{%url 'update' task.id%}">
+    {%csrf_token%}
+    <label for="">Edit Here:</label>
+    <input type="text" value="{{task.data}}" name="updated_data" id="edit_task"><br><br>
+    <button type="submit" name="action" value="update" id="update">update</button>
+    <button type="submit" name="action" value="delete" id="delete">Delete</button>
+  </form>
+  </div>
+  
+</body>
+</html>

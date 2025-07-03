@@ -1,0 +1,57 @@
+/* Vintage To-Do List Theme */
+
+body {
+  background-color: #fef6e4;   /* Warm cream paper-like background */
+  color: #6c584c;              /* Earthy brown text */
+  font-family: 'Georgia', serif;
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+  
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fffbea;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  margin-bottom: 10px;
+}
+
+th, td {
+  border: 1px solid #d6ccc2;
+  padding: 12px;
+  text-align: left;
+}
+
+th {
+  background-color: #f5e6ca;
+  color: #403d39;
+}
+/* #d5bdaf */
+button {
+  background-color: #fffbea;
+  color: #403d39;
+  font-size: medium;
+  border: none;
+  padding: 6px 12px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+button:hover {
+  background-color: #a4907c;
+  color: white;
+}
+
+#completed-data{
+  background-color: rgb(170, 243, 170);
+}
+#trash:hover{
+  background-color: tomato;
+}
+#task-details{
+  width: 60%;
+}

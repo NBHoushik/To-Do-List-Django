@@ -1,0 +1,52 @@
+
+body {
+  background-color: #fef6e4;   
+  color: #6c584c;              
+  font-family: 'Georgia', serif;
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+}
+/* #d5bdaf */
+button {
+  font-size: medium;
+  border: 1px;
+  padding: 6px 12px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+div{
+  width: 80%;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+form{
+  margin-top: 10px;
+}
+
+#edit_task{
+  width: 60%;
+  height: 50px;
+  border: none;
+  height: 20px;
+  border-radius: 4px;  
+}
+#update:hover{
+  scale: 0.9;
+}
+#delete:hover{
+  scale: 0.9;
+}
+#update{
+  background-color: rgb(169, 241, 169);
+}
+#delete{
+  background-color: rgb(240, 107, 107);
+}
