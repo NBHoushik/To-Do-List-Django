@@ -16,10 +16,4 @@ A simple and elegant web-based To-Do List application built using Django. This a
 - **Frontend:** HTML, CSS 
 - **Database:** SQLite (default)
 
-## 📦 Installation
 
-1. **Clone the repository:**
-
-   ```bash
-   git clone https://github.com/NBHoushik/To-Do-List-Django.git
-   cd To-Do-List-Django
